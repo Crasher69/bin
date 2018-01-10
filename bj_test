@@ -3,6 +3,9 @@ var train1 = "", train2 = "", train3 = "", specialisation = "", amSpecialisation
 800, centerCount = 2, centerPosition = 2;
 
 load_settings();
+console.log("Abort state = " + ReadLocalStorage(doAbort));
+console.log("Offers state = " + ReadLocalStorage(offers));
+
 
 var HayToGive = 12, OatsToGive = 10;
 if ("undefined" !== typeof e1) {
@@ -13,8 +16,7 @@ var genetics = ["galopGenetique"], lastParentPage = "", lastParentSex = "", offe
 if (void 0 === ReadLocalStorage(doAbort) || null === ReadLocalStorage(doAbort)) {
 	SaveLocalStorage(doAbort, !1);
 }
-console.log("doAbort state = " + ReadLocalStorage(doAbort));
-console.log("offers state = " + ReadLocalStorage(offers));
+
 
 "" != ReadLocalStorage(offers) && void 0 !== ReadLocalStorage(offers) && null !== ReadLocalStorage(offers) || SaveLocalStorage(offers, 0);
 var amunitionEquiped = "amunitionEquiped" + getMyParameterByName("sautGenetique");

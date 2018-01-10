@@ -11,8 +11,10 @@ if ("undefined" !== typeof e1) {
 
 var genetics = ["galopGenetique"], lastParentPage = "", lastParentSex = "", offers = "BJ_offers", doAbort = "BJ_doAbort";
 if (void 0 === ReadLocalStorage(doAbort) || null === ReadLocalStorage(doAbort)) {
-	console.log("!!!" + ReadLocalStorage(doAbort)), SaveLocalStorage(doAbort, !1);
+	SaveLocalStorage(doAbort, !1);
 }
+console.log("doAbort state = " + ReadLocalStorage(doAbort));
+console.log("offers state = " + ReadLocalStorage(offers));
 
 "" != ReadLocalStorage(offers) && void 0 !== ReadLocalStorage(offers) && null !== ReadLocalStorage(offers) || SaveLocalStorage(offers, 0);
 var amunitionEquiped = "amunitionEquiped" + getMyParameterByName("sautGenetique");
